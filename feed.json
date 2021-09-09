@@ -1,0 +1,14 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "The NLP Student&#x27;s Blog",
+    "description": "",
+    "home_page_url": "https://oysters76.github.io/blog",
+    "feed_url": "https://oysters76.github.io/blog/feed.json",
+    "user_comment": "",
+    "icon": "https://oysters76.github.io/blog/media/website/jkHsBbG9_400x400.jpg",
+    "author": {
+        "name": "Chirath Nissanka"
+    },
+    "items": [
+    ]
+}

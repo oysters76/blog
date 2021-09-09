@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>The NLP Student&#x27;s Blog</title>
+    <link href="https://oysters76.github.io/blog/feed.xml" rel="self" />
+    <link href="https://oysters76.github.io/blog" />
+    <updated>1970-01-01T05:30:00+05:30</updated>
+    <author>
+        <name>Chirath Nissanka</name>
+    </author>
+    <id>https://oysters76.github.io/blog</id>
+
+</feed>
