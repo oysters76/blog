@@ -3,7 +3,7 @@
     <title>The NLP Student&#x27;s Blog</title>
     <link href="https://oysters76.github.io/blog/feed.xml" rel="self" />
     <link href="https://oysters76.github.io/blog" />
-    <updated>2021-10-20T22:49:56+05:30</updated>
+    <updated>2021-10-20T23:00:15+05:30</updated>
     <author>
         <name>The NLP Student</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://oysters76.github.io/blog/introduction-to-reinforcement-learning.html"/>
         <id>https://oysters76.github.io/blog/introduction-to-reinforcement-learning.html</id>
 
-        <updated>2021-10-20T22:49:56+05:30</updated>
+        <updated>2021-10-20T23:00:15+05:30</updated>
             <summary>
                 <![CDATA[
                     Welcome! In this article, we will be going over the fundamentals of reinforcement learning. We will discuss what reinforcement learning is, how agents learn from rewards and experiences, what policies and value functions are, and how to model environments in a Markov decision process step-by-step.
@@ -138,11 +138,15 @@
 <p> <br>The agent can only take one step in north, east, south, and west. </p>
 <p>While the agent updates its value function by interacting and moving in this grid world environment, the value function over time would update as shown in the below table.</p>
 <p>It shows how much discounted total return each cell would give the agent over the long run. </p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://oysters76.github.io/blog/media/posts/2/policyexample.PNG" sizes="(max-width: 48em) 100vw, 768px" srcset="https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-xs.PNG 300w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-sm.PNG 480w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-md.PNG 768w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-lg.PNG 1024w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-xl.PNG 1360w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-2xl.PNG 1600w"  alt="" width="508" height="182"></figure>
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://oysters76.github.io/blog/media/posts/2/policyexample.PNG" sizes="(max-width: 48em) 100vw, 768px" srcset="https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-xs.PNG 300w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-sm.PNG 480w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-md.PNG 768w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-lg.PNG 1024w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-xl.PNG 1360w ,https://oysters76.github.io/blog/media/posts/2/responsive/policyexample-2xl.PNG 1600w"  alt="Reinforcement Learning: 2nd Edition (Finite Markov Decision Processes)" width="508" height="182">
+<figcaption >Reinforcement Learning: 2nd Edition (Finite Markov Decision Processes)</figcaption>
+</figure>
 <p>Once the agent finds the optimal policy that makes the agent optimize on getting the best possible discounted returns from this grid world, the value function would converge to the optimal value function. </p>
 <p><br>By acting greedily upon the optimal value function, we find the optimal policy function.</p>
 <p>If the agent chooses actions that get to better states (cells) with a higher value than the other states accessible from the current state the agent is in, the agent has successfully found the best policy to act optimally in this grid world in the below diagram. </p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://oysters76.github.io/blog/media/posts/2/gridworld2.PNG" sizes="(max-width: 48em) 100vw, 768px" srcset="https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-xs.PNG 300w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-sm.PNG 480w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-md.PNG 768w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-lg.PNG 1024w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-xl.PNG 1360w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-2xl.PNG 1600w"  alt="" width="779" height="270"></figure>
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://oysters76.github.io/blog/media/posts/2/gridworld2.PNG" sizes="(max-width: 48em) 100vw, 768px" srcset="https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-xs.PNG 300w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-sm.PNG 480w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-md.PNG 768w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-lg.PNG 1024w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-xl.PNG 1360w ,https://oysters76.github.io/blog/media/posts/2/responsive/gridworld2-2xl.PNG 1600w"  alt="" width="779" height="270">
+<figcaption >Reinforcement Learning: 2nd Edition (Finite Markov Decision Processes)</figcaption>
+</figure>
 <p><span data-preserver-spaces="true">That brings us to the end of the basics of reinforcement learning part 1.</span></p>
 <p><span data-preserver-spaces="true">This would be a 3 part series. In the second post, we will be going over Multi-armed bandits, an interesting problem in Reinforcement Learning. In the 3rd and final post, we will be going over finding the optimal value function solving the MDP using Dynamic Programming. </span></p>
 <p><span data-preserver-spaces="true">Stay tuned, and follow me on Twitter </span><a target="_blank" href="https://twitter.com/intent/user?screen_name=studentnlp" class="editor-rtfLink" rel="noopener"><span data-preserver-spaces="true">@studentnlp</span></a><span data-preserver-spaces="true">, so you don't miss any new posts. </span></p>
