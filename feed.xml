@@ -3,7 +3,7 @@
     <title>The NLP Student&#x27;s Blog</title>
     <link href="https://oysters76.github.io/blog/feed.xml" rel="self" />
     <link href="https://oysters76.github.io/blog" />
-    <updated>2021-10-20T23:00:15+05:30</updated>
+    <updated>2021-10-21T07:50:34+05:30</updated>
     <author>
         <name>The NLP Student</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://oysters76.github.io/blog/introduction-to-reinforcement-learning.html"/>
         <id>https://oysters76.github.io/blog/introduction-to-reinforcement-learning.html</id>
 
-        <updated>2021-10-20T23:00:15+05:30</updated>
+        <updated>2021-10-21T07:50:34+05:30</updated>
             <summary>
                 <![CDATA[
                     Welcome! In this article, we will be going over the fundamentals of reinforcement learning. We will discuss what reinforcement learning is, how agents learn from rewards and experiences, what policies and value functions are, and how to model environments in a Markov decision process step-by-step.
@@ -72,7 +72,7 @@
 <p>In RL, understanding the concept of a state is vital. The state is the information that we use to determine what might happen next. Simply put, the state is a function of history. <br><br>The agent has its state, in which case the agent's state is the function of the agent's history and experiences collected by interacting with the environment.</p>
 <p>The environment also has its state, known as the environment state. <br><br>The agent's or the environment's state is a <strong>Markov state</strong> if the current state is independent of the past. This is because the past information (history) gets derived from the current state. Therefore the state doesn't depend on history. <br><br><strong>"The future is independent of the past given the present"</strong> - and future states can be computed from the current state, and the history can be discarded. </p>
 <p>Suppose the agent can access the environment state. In that case, the mathematical model of the RL problem is known as a fully observable Markov decision process, whereas if the agent cannot access the state of the environment, then it's known as a partially observable Markov decision process. </p>
-<h3 id="mcetoc_1ficm0ep4ij">Returns, Epsoides and Continous Tasks  </h3>
+<h3 id="mcetoc_1ficm0ep4ij">Returns, Epsoides and Continuous Tasks  </h3>
 <p>The agent's goal is to maximize the total cumulative reward it receives from the environment over time. <br><br>To understand more about the return, we formalize it as follows. This is the basic form of the expected return, which is just the sum of all rewards gathered till the agent reaches the terminal state of the environment (last state of interaction with the environment) from some timestep t. Capital T denotes the final timestep.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://oysters76.github.io/blog/media/posts/2/returneq.PNG" sizes="(max-width: 48em) 100vw, 768px" srcset="https://oysters76.github.io/blog/media/posts/2/responsive/returneq-xs.PNG 300w ,https://oysters76.github.io/blog/media/posts/2/responsive/returneq-sm.PNG 480w ,https://oysters76.github.io/blog/media/posts/2/responsive/returneq-md.PNG 768w ,https://oysters76.github.io/blog/media/posts/2/responsive/returneq-lg.PNG 1024w ,https://oysters76.github.io/blog/media/posts/2/responsive/returneq-xl.PNG 1360w ,https://oysters76.github.io/blog/media/posts/2/responsive/returneq-2xl.PNG 1600w"  alt="" width="375" height="61"></figure>
 <p>Depending on the environment, the agent can work in episodic tasks or continuing tasks.</p>
