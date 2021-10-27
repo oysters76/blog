@@ -3,21 +3,21 @@
     <title>The NLP Student&#x27;s Blog</title>
     <link href="https://oysters76.github.io/blog/feed.xml" rel="self" />
     <link href="https://oysters76.github.io/blog" />
-    <updated>2021-10-26T21:45:19+05:30</updated>
+    <updated>2021-10-27T08:04:03+05:30</updated>
     <author>
         <name>The NLP Student</name>
     </author>
     <id>https://oysters76.github.io/blog</id>
 
     <entry>
-        <title>The Multi-Armed Bandits Problem </title>
+        <title>The Multi-Armed Bandit Problem </title>
         <author>
             <name>The NLP Student</name>
         </author>
         <link href="https://oysters76.github.io/blog/the-multi-armed-bandits-problem.html"/>
         <id>https://oysters76.github.io/blog/the-multi-armed-bandits-problem.html</id>
 
-        <updated>2021-10-26T21:45:19+05:30</updated>
+        <updated>2021-10-27T08:04:03+05:30</updated>
             <summary>
                 <![CDATA[
                     In solving the problem of exploration vs. exploitation in reinforcement learning, we use bandit problems to understand and apply algorithms that balance RL agents' exploration and exploitation behaviors. What exactly is the multi-armed bandit problem, and how can you solve this type of problem in&hellip;
@@ -34,13 +34,13 @@
 <li><a href="#mcetoc_1fimqv2jdp5">Stationary vs Non Stationary Bandit Problem </a></li>
 </ul>
 </li>
-<li><a href="#mcetoc_1fimqv2jdp6">Solve by estimates </a>
+<li><a href="#mcetoc_1fimqv2jdp6">Solve by taking estimates </a>
 <ul>
 <li><a href="#mcetoc_1fimqv2jdp7">Incremental Updates</a></li>
 <li><a href="#mcetoc_1fimt3ol2qu">Solving non-stationary bandit problems </a></li>
 </ul>
 </li>
-<li><a href="#mcetoc_1fimqv2jdp8">Pseudcode, Code and Results </a></li>
+<li><a href="#mcetoc_1fivpg6e31e">Pseudocode, Code, and Results </a></li>
 <li><a href="#mcetoc_1fimqv2jdp9">References </a></li>
 </ul>
 </div>
@@ -50,7 +50,7 @@
 <p>The rewards for the actions you or the reinforcement learning (RL) agent takes at the current timestep are sampled from a probability distribution. E.g., Gaussian Distribution. <br><br>In a stationary Bandit problem, the probability distribution doesn't change at each timestep, which means that the true value of each action is constant across all timesteps. However, in a non-stationary bandit problem, the probability distribution changes at every timestep. <br><br>Therefore the true value of each action at each timestep is quite different from other timesteps. <br><br>However, we can solve both variations of such bandit problems by estimating the value of each action, continuing to re-estimate them by trying different actions (exploration), or picking the highest calculated value action you currently have (exploitation) </p>
 <h2 id="mcetoc_1fimqv2jdp6">Solve by taking estimates </h2>
 <p>One way to solve the Multi-Armed Bandit problem is through estimating the true value of each action.</p>
-<p><br>Solving by estimating the true value of each action can either be applied to stationary and non-stationary bandit problems. </p>
+<p>Solving by estimating the true value of each action can either be applied to stationary and non-stationary bandit problems. </p>
 <p>Firstly we need a few mathematical notations to formalize the bandit problem before finding a way to solve it.</p>
 <ul>
 <li>\( A_t \)  The action the agent picks at time \(t\)</li>
@@ -80,9 +80,8 @@
 <p><span data-preserver-spaces="true">This is done using a fixed step size parameter \( \alpha \), a </span><strong><span data-preserver-spaces="true">constant</span></strong><span data-preserver-spaces="true"> </span><strong><span data-preserver-spaces="true">parameter</span></strong><span data-preserver-spaces="true"> that lies between</span><strong><span data-preserver-spaces="true"> 0 and 1. </span></strong></p>
 <p>$$\begin{aligned} Q_{n+1} &amp;= Q_n + \alpha[R_n + Q_n] \\ &amp;= \alpha R_n + (1 - \alpha)Q_n \\ &amp;= \alpha R_n + (1 - \alpha)Q_n \\ &amp;= \alpha R_n + (1 - \alpha)[\alpha R_{n-1} + (1-\alpha)Q_{n-1}] \\ &amp;= \alpha R_n + (1 - \alpha)[\alpha R_{n-1} + (1-\alpha)Q_{n-1}] \\ &amp;= \alpha R_n + (1 - \alpha) \alpha R_{n-1} + (1 - \alpha)^2 \alpha R_{n-2} + .... + (1- \alpha)^nQ_1 \\ &amp;= (1- \alpha)^nQ_1 + \sum^{n}_{i=1}\alpha(1 - \alpha)^{n-i}R_i \end{aligned}$$</p>
 <p>By having a constant step size, the action values are updated so that the estimates are moved in the direction of the recent reward, as they have a higher weight and the older reward signals have a lower influence in the direction of where the estimates would move. </p>
-<p><br>This makes the RL agents get more good action value estimates in non-stationary bandit problems. </p>
-<p> </p>
-<h2><span data-preserver-spaces="true">Pseudocode, Code, and Results </span></h2>
+<p>This makes the RL agents get more good action value estimates in non-stationary bandit problems. </p>
+<h2 id="mcetoc_1fivpg6e31e"><span data-preserver-spaces="true">Pseudocode, Code, and Results </span></h2>
 <p>The following code snippet shows the pseudocode implementation of solving the bandit problem by estimating the value of each action. </p>
 <figure class="post__image"><img loading="lazy"  src="https://oysters76.github.io/blog/media/posts/3/carbon7-2.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://oysters76.github.io/blog/media/posts/3/responsive/carbon7-2-xs.png 300w ,https://oysters76.github.io/blog/media/posts/3/responsive/carbon7-2-sm.png 480w ,https://oysters76.github.io/blog/media/posts/3/responsive/carbon7-2-md.png 768w ,https://oysters76.github.io/blog/media/posts/3/responsive/carbon7-2-lg.png 1024w ,https://oysters76.github.io/blog/media/posts/3/responsive/carbon7-2-xl.png 1360w ,https://oysters76.github.io/blog/media/posts/3/responsive/carbon7-2-2xl.png 1600w"  alt="" width="1806" height="1076"></figure>
 <p>The following code snippet is the complete implementation of solving a ten-armed bandit problem. At each timestep, the agent can pick any ten actions and get a reward based on a gaussian distribution. <br><br>This distribution doesn't change over timesteps. Therefore, this is a stationary bandit problem. </p>
